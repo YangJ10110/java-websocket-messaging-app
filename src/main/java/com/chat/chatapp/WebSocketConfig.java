@@ -1,11 +1,14 @@
-package com.yourpackage.config;
+// WebSocketConfig.java
+package com.chat.chatapp.config;
+import com.chat.chatapp.handler.ChatWebSocketHandler;
+
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 import org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor;
-import com.yourpackage.handler.ChatWebSocketHandler; // Step 3 handler
+import com.chat.chatapp.handler.ChatWebSocketHandler;
 
 @Configuration
 @EnableWebSocket

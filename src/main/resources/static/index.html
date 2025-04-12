@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Direct Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f2f2f2;
+        }
+
+        #chat-box {
+            border: 1px solid #ccc;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+
+        #message-form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #message-input, #recipient-input {
+            padding: 10px;
+            flex: 1;
+        }
+
+        #send-button {
+            padding: 10px 20px;
+        }
+
+        .msg {
+            margin-bottom: 5px;
+        }
+
+        .client { color: blue; }
+        .server { color: green; }
+        .info { color: gray; }
+    </style>
+</head>
+<body>
+    <h2>📨 WebSocket Private Chat</h2>
+    <p><strong>Your Session ID:</strong> <span id="session-id">[waiting]</span></p>
+
+    <div id="chat-box"></div>
+
+    <form id="message-form">
+        <input type="text" id="recipient-input" placeholder="Recipient Session ID" required />
+        <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off" required />
+        <button type="submit" id="send-button">Send</button>
+    </form>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html>
